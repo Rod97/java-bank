@@ -54,8 +54,8 @@ public class TransferMenu implements Menu {
 						Account receivingAccount = accountInfoService.getAccountByAccountNumber(receivingAccountNumber,
 								receiver);
 
-						System.out.println(
-								"How much would you like to send?\nAvailable: $" + accountBeingAccessed.getBalance());
+						System.out.println("How much would you like to send?\nAvailable: "
+								+ FormatBalanceUtil.databaseToApp(Integer.parseInt(accountBeingAccessed.getBalance())));
 						String input = Menu.sc.nextLine();
 
 						if (InputCheckerUtil.isNumberWithDecimal(input)) {
@@ -70,7 +70,8 @@ public class TransferMenu implements Menu {
 				} catch (SQLException f) {
 					logger.warn(f);
 					System.out.println(
-							"An unexepected error occured while trying to complete your deposit. Try again.\nIf the problem continues, please go away.\n");
+							"An unexepected error occured while trying to complete your deposit. "
+							+ "Try again.\nIf the problem continues, please go away.\n");
 
 				} catch (BlankEntryException | UserNotFoundException | InvalidInputException e) {
 					// TODO LOG
@@ -88,7 +89,8 @@ public class TransferMenu implements Menu {
 							.getTransfersByAccountNumber(accountBeingAccessed.getAccountNumber());
 
 					for (Transfer transfer : transfersForAccount) {
-						if (transfer.getStatus().equals("PENDING")) {
+						if (transfer.getStatus().equals("PENDING") && Integer
+								.parseInt(transfer.getReceivingAccount()) == accountBeingAccessed.getAccountNumber()) {
 							System.out.println(transfer);
 						}
 					}
