@@ -56,5 +56,6 @@ I have set them up as environment variables on my machine, but you can hard code
 	4. Active Accounts
 	5. Pending Accounts
 
-The following script should be enough to create the tables as the Java application expects them
+The following script should be enough to create the tables as the Java application expects them:
+---
 `code`
