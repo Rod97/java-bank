@@ -58,4 +58,5 @@ I have set them up as environment variables on my machine, but you can hard code
 
 The following script should be enough to create the tables as the Java application expects them:
 ---
-`code`
+`code
+multilineCode();`
