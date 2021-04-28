@@ -58,8 +58,7 @@ I have set them up as environment variables on my machine, but you can hard code
 
 The following script should be enough to create the tables as the Java application expects them:
 ---
-`
-CREATE EXTENSION pgcrypto;
+`   CREATE EXTENSION pgcrypto;
 
    CREATE TABLE bank_user(
 	username VARCHAR(16) PRIMARY KEY, --cannot start with .
@@ -100,5 +99,4 @@ CREATE EXTENSION pgcrypto;
 	amount INT NOT NULL,
 	date_of_transfer DATE,
 	status VARCHAR
-	);
-`
+	);`
