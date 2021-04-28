@@ -49,7 +49,12 @@ The Banking API will manage the bank accounts of its users. It will be managed b
 I have set them up as environment variables on my machine, but you can hard code them if you need to. However, if you wish to push this to another repo, it is recommended that you **do not** hardcode these variables.
 ### Database
 * All DAO queries are written in PostgreSQL, so you will need a database built on that language
-* Your database will need 3 tables
-	1. First
-	2. 2
-	3. 3
+* Your database will need 5 tables
+	1. Bank Users
+	2. Bank Employees
+	3. Transfers
+	4. Active Accounts
+	5. Pending Accounts
+
+The following script should be enough to create the tables as the Java application expects them
+`code`
