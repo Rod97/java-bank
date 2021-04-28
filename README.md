@@ -35,3 +35,21 @@ The Banking API will manage the bank accounts of its users. It will be managed b
 * PostgreSQL
 * Log4j
 * JUnit
+
+## Getting Started
+### Java
+* Ensure you have a JDK installed
+* Open the project in your IDE
+* Modify the ConnectionUtil class to establish your database connection
+	* **You may need to change**
+	* Driver
+	* URL
+	* Username
+	* Password
+I have set them up as environment variables on my machine, but you can hard code them if you need to. However, if you wish to push this to another repo, it is recommended that you **do not** hardcode these variables.
+### Database
+* All DAO queries are written in PostgreSQL, so you will need a database built on that language
+* Your database will need 3 tables
+	1. First
+	2. 2
+	3. 3
