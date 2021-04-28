@@ -95,5 +95,5 @@ CREATE EXTENSION pgcrypto;
 	);
 ```
 
-##Usage
+## Usage
 Upon first use, you should create an employee and a regular user. After that, you can log in as one or the other and freely navigate their respective menus.
